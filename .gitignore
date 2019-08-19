@@ -1,1 +1,14 @@
-*.sqlite3
+env.py
+db.sqlite3
+.~c9*
+__pycache__
+.c9
+../.c9
+/.c9/
+.c9/
+.c9
+../.c9
+c9
+.c9
+. .. .gitignore
+../.c9
