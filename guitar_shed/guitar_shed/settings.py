@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'guitar_shed.wsgi.application'
+WSGI_APPLICATION = 'guitar-shed.wsgi.application'
 
 
 # Database
