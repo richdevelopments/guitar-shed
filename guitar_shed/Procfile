@@ -1,1 +1,1 @@
-web: gunicorn guitar-shed.wsgi:application
+web: gunicorn guitar_shed.wsgi:application
