@@ -137,8 +137,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
