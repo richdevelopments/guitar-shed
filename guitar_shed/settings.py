@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
+import env
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'store',
     'cart',
     'checkout',
+    'threads',
+    'polls',
+    'tinymce',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'guitar-shed.wsgi.application'
+WSGI_APPLICATION = 'guitar_shed.wsgi.application'
 
 
 # Database
@@ -151,3 +155,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
+                               "tinymce", "tinymce.min.js")
