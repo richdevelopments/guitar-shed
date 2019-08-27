@@ -16,9 +16,7 @@
     {% block head_js %}
     {% endblock head_js %}
 </head>
-<style>
 
-</style>
 <body>
     <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
@@ -73,7 +71,9 @@
                 <button type="search" class="btn ">Search</button>
             </form>
         </div>
-        {% block content %} {% endblock %}
+        {% block content %} 
+        <div class="bg"></div>
+        {% endblock %}
     </div>
     <footer>
         <div class="container">
