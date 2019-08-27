@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'polls',
     'tinymce',
     'rest_framework',
+    'home',
 ]
 
 MIDDLEWARE = [
