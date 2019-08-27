@@ -1,7 +1,15 @@
 body {
     font-family: sans-serif;
     padding-top: 100px;
-    background-color: #557A95;
+    /*background-color: #557A95;*/
+}
+
+.bg {
+    background-image: url("/media/images/pic7.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navbar {
@@ -32,10 +40,10 @@ footer {
     border-radius: 9px;
 }
 
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
+/*.label-warning[href],*/
+/*.badge-warning[href] {*/
+/*    background-color: #c67605;*/
+/*}*/
 
 .product {
     background-size: contain;
@@ -57,7 +65,8 @@ caption p {
 }
 
 .panel-default {
-    background-color: #B1A296;
+    background-color: #05b069;
+    color: #ffffff;
     padding: 0;
     /*border-radius: 1rem;*/
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
@@ -77,3 +86,4 @@ caption p {
      color: #FFFFFF;
      text-align: center;
 }
+
