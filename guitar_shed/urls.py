@@ -22,20 +22,22 @@ from search import urls as urls_search
 from checkout import urls as urls_checkout
 from store.views import all_products
 from django.views import static
-from .settings import MEDIA_ROOT
+from django.conf import settings
 from threads import views as forum_views
 from polls import api_views
 from threads import api_views as thread_api_views
+from home import views as home_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name='index'),
+    url(r'^$', home_views.index, name='index'),
+    url(r'^products$', all_products, name='products'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^store/', include(urls_store)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
-    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': settings.MEDIA_ROOT}),
         # Forum URLs
     url(r'^forum/$', forum_views.forum),
     url(r'^threads/(?P<subject_id>\d+)/$',
