@@ -5,8 +5,8 @@ body {
 }
 
 .bg {
-    background-image: url("/media/images/pic7.jpg");
-    height: 100%; 
+    background-image:url('/media/images/pic7.jpg');
+    height: 100px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@ footer {
 }
 
 .icon-bar {
-    background-color: #fff;
+    background-color: #A9A9A9;
 }
 
 .accountform {
