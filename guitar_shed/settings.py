@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'fbc19332d82e4005820b398540d5b4d8.vfs.cloud9.us-east-1.amazonaws.com', 'guitar-shed.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'fbc19332d82e4005820b398540d5b4d8.vfs.cloud9.us-east-1.amazonaws.com', 'guitar-shed.herokuapp.com', 'localhost']
 
 
 # Application definition
