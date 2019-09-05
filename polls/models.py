@@ -1,28 +1,23 @@
 from django.db import models
-from django.conf import settings
-from threads.models import Thread
 
 
-class Poll(models.Model):
+class Option(models.Model):
 
-    question = models.TextField()
-    thread = models.OneToOneField(Thread, null=True)
+    title = models.CharField(max_length=50, blank=False, null=False)
+    number_of_votes = models.IntegerField()
 
-    def __unicode__(self):
-        return self.question
-
-
-class PollSubject(models.Model):
-
-    name = models.CharField(max_length=255)
-    poll = models.ForeignKey(Poll, related_name='subjects')
-
-    def __unicode__(self):
-        return self.name
+    def __str__(self):
+        return self.title
 
 
-class Vote(models.Model):
+class VotingPoll(models.Model):
 
-    poll = models.ForeignKey(Poll, related_name="votes")
-    subject = models.ForeignKey(PollSubject, related_name="votes")
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='votes')
+    option_one = models.ForeignKey(Option, related_name='option_one',
+        on_delete=models.CASCADE)
+    option_two = models.ForeignKey(Option, related_name='option_two',
+        on_delete=models.CASCADE)
+    expiry_date = models.DateTimeField(blank=False, null=False)
+
+    def __str__(self):
+        return "{} VS {}".format(
+            self.option_one.title, self.option_two.title)

@@ -44,11 +44,8 @@ INSTALLED_APPS = [
     'store',
     'cart',
     'checkout',
-    'threads',
-    'polls',
-    'tinymce',
-    'rest_framework',
     'home',
+    'polls',
 ]
 
 MIDDLEWARE = [
