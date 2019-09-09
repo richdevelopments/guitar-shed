@@ -1,10 +1,33 @@
 {% extends 'base.html' %}
+
 {% load static from staticfiles %}
 
 {% block page_title %}Home Page{% endblock %}
 
-{% block page_heading %}Home{% endblock %}
+{% block page_heading%}Home{% endblock %}
 
 {% block content %}
-  THIS
+<div class="container-fluid">
+	<div class="row bg">
+		<div class="container text-center mt-5">
+			<h1>Guitar Shed</h1>
+		</div>
+		<div class="container text-center">
+			<h2>Guitar Tuition for ALL Guitar Players! </h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="youtube-responsive-container">
+					<video class="video" controls>
+						<source src="media/video/guitar_shed_vid.mp4" type="video/mp4"> Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
+		</div>
+		<p>Vote for the content that you want to learn!</p>
+		<p>Search the product range and see what lessons are already on offer!</p>
+		<p>Tutorials for Beginners to Advanced players!</p>
+		<p>Register Now! And Transform Your Playing!</p>
+	</div>
+</div>
 {% endblock %}
