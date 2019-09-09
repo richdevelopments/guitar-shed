@@ -46,19 +46,6 @@ nav {
   box-shadow: 5px 4px 5px #000;
 }
 
-/* .bg {
-    background-image:url('/media/images/pic7.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-} */
-
-/* .navbar {
-    background-image: linear-gradient(#051f2d, #2fa4e7 80%, #1d9ce5);
-} */
 
 footer {
     margin-top: 40px;
@@ -67,10 +54,10 @@ footer {
     border-top: 1px solid #ededed;
     color: rgb(0, 0, 0);
 }
-
+/*
 .icon-bar {
     background-color: #A9A9A9;
-}
+} */
 
 .accountform {
     padding-top: 20px;
@@ -84,11 +71,6 @@ footer {
     border-radius: 9px;
 }
 
-/*.label-warning[href],*/
-/*.badge-warning[href] {*/
-/*    background-color: #c67605;*/
-/*}*/
-
 .product {
     background-size: contain;
     background-position: center center;
@@ -98,21 +80,21 @@ footer {
     margin: 0 auto;
 }
 
-/* caption p {
+caption p {
     word-wrap: break-word;
-} */
+}
 
-/* .row.row-flex {
+.row.row-flex {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
-} */
+}
 
 .panel-default {
-    background-color: #05b069;
-    color: #ffffff;
+    background-color: #484a53;
+    color: #0a0808;
     padding: 0;
-    /*border-radius: 1rem;*/
+    border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
 }
 
