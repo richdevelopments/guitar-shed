@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Polls{% endblock %}
+
+{% block content %}
+
+{% for poll in polls %}
+
+ {{ poll }}
+
+{% endfor %}
+
+
+
+{% endblock %}
