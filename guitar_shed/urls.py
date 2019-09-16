@@ -21,9 +21,10 @@ from store import urls as urls_store
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
-from store.views import all_products
+from polls import urls as urls_polls
 from django.views import static
 from django.conf import settings
+from django.views.generic import RedirectView
 
 
 urlpatterns = [
@@ -34,6 +35,7 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
+    url(r'^polls/', include(urls_polls)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': settings.MEDIA_ROOT})
 ]
 
