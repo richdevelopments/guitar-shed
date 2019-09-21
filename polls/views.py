@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from polls.models import VotingPoll
+from polls.models import VotingPoll, Option
 
 import logging
 
@@ -14,3 +14,5 @@ def polls(request):
 
     logging.info("TEST")
     return render(request, 'polls.html', {'polls': polls})
+
+

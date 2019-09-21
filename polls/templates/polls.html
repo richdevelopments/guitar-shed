@@ -4,12 +4,25 @@
 
 {% block content %}
 
-{% for poll in polls %}
+<form action="" method="post">
+ <ul>
+    {% for poll in polls %}
 
- {{ poll }}
+    <li><h2>{{ poll }}</h2></li>
+    {{ options }}
+    <div class="col-sm-3" id="radio">
+    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
+    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
+    </div>
+    <div class="col-sm-3" id="radio">
+    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
+    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
+    </div>
 
-{% endfor %}
+    <button type="submit" class="btn btn-primary" value="Vote">Vote</button>
+    {% endfor %}
 
-
+</ul>
+</form>
 
 {% endblock %}

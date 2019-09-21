@@ -59,9 +59,9 @@ footer {
     background-color: #A9A9A9;
 } */
 
-.accountform {
+/* .accountform {
     padding-top: 20px;
-}
+} */
 
 .badge {
     padding-left: 9px;
@@ -91,7 +91,7 @@ caption p {
 }
 
 .panel-default {
-    background-color: #484a53;
+    background-color: #ffffff;
     color: #0a0808;
     padding: 0;
     border-radius: 1rem;
