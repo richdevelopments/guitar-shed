@@ -18,19 +18,24 @@ def polls(request):
     return render(request, 'polls.html', {'polls': polls})
 
 
+def detail(request, polls_id):
+    question = get_object_or_404(VotingPoll, pk=polls_id)
+    return render(request, 'polls/polls.html', {'polls': polls})
+
+
 def vote(request):
-    polls = get_object_or_404(VotingPolls, pk=polls_id)
+    polls = get_object_or_404(VotingPoll, pk=polls_id)
     try:
-        selected_options = polls.options_set.get(pk=request.POST['options'])
-    except (KeyError, Options.DoesNotExist):
-        # Redisplay the question voting form.
+        selected_option = polls.option_set.get(pk=request.POST['options'])
+    except (KeyError, Option.DoesNotExist):
+        # Redisplay the poll voting form.
         return render(request, 'polls.html', {
             'polls': polls,
             'error_message': "You didn't select an option.",
         })
     else:
-        selected_options.votes += 1
-        selected_options.save()
+        selected_option.votes += 1
+        selected_option.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.

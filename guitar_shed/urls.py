@@ -25,6 +25,8 @@ from polls import urls as urls_polls
 from django.views import static
 from django.conf import settings
 from django.views.generic import RedirectView
+from django.shortcuts import get_object_or_404
+from django.urls import reverse
 
 
 urlpatterns = [
@@ -36,6 +38,7 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^polls/', include(urls_polls)),
+    url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': settings.MEDIA_ROOT})
 ]
 

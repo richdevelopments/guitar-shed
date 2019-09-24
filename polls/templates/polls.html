@@ -8,7 +8,7 @@
 <h2>Vote For The Lessons You Want!</h2>
 {% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
 
-<form action="" method="post">
+<form action="{% url 'polls:vote' polls.id %}" method="post">
 {% csrf_token %}
 
  <ul>
@@ -17,24 +17,26 @@
     <li><h3>{{ poll }}</h3></li>
 
     <div class="col-sm-3" id="radio">
-    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ options.id }}">
-    <label for="option{{ forloop.counter }}">{{ options.options_text }}</label><br>
+    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
+    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
     </div>
     <div class="col-sm-3" id="radio">
-    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ options.id }}">
-    <label for="option{{ forloop.counter }}">{{ options.options_text }}</label><br>
+    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
+    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
     </div>
 
-    <button type="submit" class="btn btn-primary" value="Vote">Vote</button>
+    <input type="submit" class="btn btn-primary" value="Vote">
     {% endfor %}
 
 </ul>
 </form>
 
 <ul>
-{% for options in polls.options_set.all %}
-    <li>{{ options.options_text }} -- {{ options.votes }} vote {{ options.votes|pluralize }}</li>
+{% for option in polls.option_set.all %}
+    <li>{{ option.option_text }} -- {{ option.votes }} vote{{ option.votes|pluralize }}</li>
 {% endfor %}
 </ul>
+
+<a>Vote again?</a>
 
 {% endblock %}
