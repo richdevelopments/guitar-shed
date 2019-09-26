@@ -8,6 +8,5 @@ from polls.models import VotingPoll, Option
 from . import views
 
 urlpatterns = [
-    url(r'', views.polls, name='polls'),
-    url(r'polls/', views.vote, name='vote'),
+    url(r'', views.polls, name='polls')
 ]

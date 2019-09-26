@@ -2,13 +2,12 @@
 
 {% block title %}Polls{% endblock %}
 
-<div id="poll_container">
+
 {% block content %}
 
 <h2>Vote For The Lessons You Want!</h2>
 {% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
 
-<form action="{% url 'polls:vote' polls.id %}" method="post">
 {% csrf_token %}
 
  <ul>
@@ -16,27 +15,26 @@
 
     <li><h3>{{ poll }}</h3></li>
 
+    {% if user not in poll.option_one.voters.all and user not in poll.option_two.voters.all %}
+
+    <form method="POST">{% csrf_token %}
     <div class="col-sm-3" id="radio">
-    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
-    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
+    <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_one.id }}">
+    <label for="option{{ forloop.counter }}">{{ poll.option_one.option_text }}</label><br>
     </div>
     <div class="col-sm-3" id="radio">
-    <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ option.id }}">
-    <label for="option{{ forloop.counter }}">{{ option.option_text }}</label><br>
+    <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_two.id }}">
+    <label for="option{{ forloop.counter }}">{{ poll.option_two.option_text }}</label><br>
     </div>
 
     <input type="submit" class="btn btn-primary" value="Vote">
+    </form>
+    {% else %}
+    {{ poll.option_one.voters.count }} vs {{ poll.option_two.voters.count }}
+    {% endif %}
     {% endfor %}
 
 </ul>
-</form>
 
-<ul>
-{% for option in polls.option_set.all %}
-    <li>{{ option.option_text }} -- {{ option.votes }} vote{{ option.votes|pluralize }}</li>
-{% endfor %}
-</ul>
-
-<a>Vote again?</a>
 
 {% endblock %}
