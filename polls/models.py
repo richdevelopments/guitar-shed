@@ -1,10 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Option(models.Model):
 
     title = models.CharField(max_length=50, blank=False, null=False)
-    number_of_votes = models.IntegerField()
+    voters = models.ManyToManyField(User, related_name="voters")
 
     def __str__(self):
         return self.title
