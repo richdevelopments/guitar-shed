@@ -1,15 +1,11 @@
-{% extends "base.html" %}
-
-{% block title %}Polls{% endblock %}
-
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Polls{% endblock %} {% block content %}
 
 <h2>Vote For The Lessons You Want!</h2>
 {% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
 
 {% csrf_token %}
 
+<div class="container">
  <ul>
     {% for poll in polls %}
 
@@ -29,12 +25,17 @@
 
     <input type="submit" class="btn btn-primary" value="Vote">
     </form>
+
     {% else %}
-    {{ poll.option_one.voters.count }} vs {{ poll.option_two.voters.count }}
+
+    <label id="results-label">Results</label><div class="results-option-one">{{ poll.option_one.voters.count }}</div> <span id="vs">vs</span> <div class="results-option-two">{{ poll.option_two.voters.count }}</div>
+
     {% endif %}
+
     {% endfor %}
 
 </ul>
 
+</div>
 
 {% endblock %}

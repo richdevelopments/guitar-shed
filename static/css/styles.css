@@ -4,44 +4,23 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #4f5d6e;
-  position: relative;
-  background: rgb(26, 49, 95);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(10%, rgba(26, 49, 95, 1)), color-stop(24%, rgba(29, 108, 141, 1)), color-stop(37%, rgba(41, 136, 151, 1)), color-stop(77%, rgba(39, 45, 100, 1)), color-stop(90%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 1)));
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f', GradientType=0);
+  margin: 0;
+  color: #ededed;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* W3C */
+
+}
+  color: #fff;
 }
 
-.body-wrap {
-  min-height: 10px;
 }
 
-.body-wrap {
-  position: relative;
-  z-index: 0;
-}
-
-.body-wrap:before,
-.body-wrap:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 0px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 0)));
-  background: linear-gradient(to bottom, rgba(26, 49, 95, 1) 0%, rgba(26, 49, 95, 0) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#001a315f', GradientType=0);
-}
-
-.body-wrap:after {
-  top: auto;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0);
-}
-
-nav {
+navbar {
   margin-top: 60px;
   box-shadow: 5px 4px 5px #000;
 }
@@ -54,14 +33,7 @@ footer {
     border-top: 1px solid #ededed;
     color: rgb(0, 0, 0);
 }
-/*
-.icon-bar {
-    background-color: #A9A9A9;
-} */
 
-/* .accountform {
-    padding-top: 20px;
-} */
 
 .badge {
     padding-left: 9px;
@@ -114,16 +86,47 @@ caption p {
 }
 
 h1, h2, h3 {
-    color: black;
+    color: rgb(230, 228, 228);
 }
 
 .video {
         width: 100%;
         height: 100%;
-
 }
 
 .youtube-responsive-container {
             padding-left: 10%;
             padding-right: 10%;
+}
+
+.results-option-one {
+    position: relative;
+    color: #ffffff;
+    left: 120px;
+    font-size: 20px;
+    bottom: 12px;
+}
+
+.results-option-two {
+    position: relative;
+    left: 235px;
+    color:#ffffff;
+    bottom: 68px;
+    font-size: 20px;
+
+}
+
+#vs {
+    position: relative;
+    color: #ffffff;
+    left: 175px;
+    font-size: 20px;
+    bottom: 40px;
+}
+
+#results-label {
+    position: relative;
+    right: 80px;
+    color:#ffffff;
+    top: 15px;
 }
