@@ -29,7 +29,7 @@
     {% else %}
 
     <label id="results-label">Results</label><div class="results-option-one">{{ poll.option_one.voters.count }}</div> <span id="vs">vs</span> <div class="results-option-two">{{ poll.option_two.voters.count }}</div>
-    { expiry_date }
+    <label id="expiry_date">Expiry Date</label><div class="results-option-one">{{ poll.expiry_date.date }}</div>
 
     {% endif %}
 
