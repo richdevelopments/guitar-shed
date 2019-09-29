@@ -15,6 +15,7 @@ def polls(request):
 
     polls = VotingPoll.objects.all()
     user = User.objects.get(username=request.user.username)
+    expiry_date = VotingPoll.objects.all()
 
     if request.method == "POST":
         option_id = request.POST["vote"]
@@ -24,4 +25,4 @@ def polls(request):
         option.save()
 
     logging.info("TEST")
-    return render(request, 'polls.html', {'polls': polls, 'user': user})
+    return render(request, 'polls.html', {'polls': polls, 'user': user, 'expiry_date': expiry_date})
