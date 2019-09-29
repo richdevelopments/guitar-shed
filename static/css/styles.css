@@ -15,13 +15,10 @@ body {
   background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* W3C */
 
 }
-  color: #fff;
-}
 
-}
-
-navbar {
+.navbar {
   margin-top: 60px;
+  color: rgb(14, 72, 110);
   box-shadow: 5px 4px 5px #000;
 }
 
@@ -85,7 +82,7 @@ caption p {
      text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: rgb(230, 228, 228);
 }
 
@@ -130,3 +127,8 @@ h1, h2, h3 {
     color:#ffffff;
     top: 15px;
 }
+
+.messages {
+    size: 40px;
+}
+
