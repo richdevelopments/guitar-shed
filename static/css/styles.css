@@ -40,12 +40,16 @@ footer {
 }
 
 .product {
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.product-description {
+    min-height: 40px;
 }
 
 caption p {
@@ -70,9 +74,6 @@ caption p {
     height: 100%;
 }
 
-.product-description {
-    min-height: 40px;
-}
 
 .btn {
      background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
@@ -122,7 +123,14 @@ h1, h2 {
 
 #results-label {
     position: relative;
-    right: 80px;
     color:#ffffff;
     top: 15px;
+}
+
+.expiry-date {
+    position: relative;
+    left: 120px;
+    color:#ffffff;
+    bottom: 30px;
+    font-size: 20px;
 }
