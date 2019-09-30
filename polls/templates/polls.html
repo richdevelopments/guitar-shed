@@ -14,11 +14,11 @@
     {% if user not in poll.option_one.voters.all and user not in poll.option_two.voters.all %}
 
     <form method="POST">{% csrf_token %}
-    <div class="col-sm-3" id="radio">
+    <div class="col-sm-6" id="radio">
     <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_one.id }}">
     <label for="option{{ forloop.counter }}">{{ poll.option_one.option_text }}</label><br>
     </div>
-    <div class="col-sm-3" id="radio">
+    <div class="col-sm-6" id="radio">
     <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_two.id }}">
     <label for="option{{ forloop.counter }}">{{ poll.option_two.option_text }}</label><br>
     </div>
@@ -29,7 +29,7 @@
     {% else %}
 
     <label id="results-label">Results</label><div class="results-option-one">{{ poll.option_one.voters.count }}</div> <span id="vs">vs</span> <div class="results-option-two">{{ poll.option_two.voters.count }}</div>
-    <label id="expiry_date">Expiry Date</label><div class="results-option-one">{{ poll.expiry_date.date }}</div>
+    <label id="expiry_date">Expiry Date</label><div class="expiry-date">{{ poll.expiry_date.date }}</div>
 
     {% endif %}
 
