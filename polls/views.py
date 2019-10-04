@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+import datetime
 import logging
 
 
@@ -15,7 +16,6 @@ def polls(request):
 
     polls = VotingPoll.objects.all()
     user = User.objects.get(username=request.user.username)
-
     if request.method == "POST":
         option_id = request.POST["vote"]
 
