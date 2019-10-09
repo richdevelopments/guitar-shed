@@ -15,12 +15,15 @@
      <li><h3>{{ poll }}</h3></li>
 
     {% if poll.is_past %}
+
     <form method="post" action="{% url 'store' %}">
+    {% csrf_token %}
     <div class="expired-polls">
     <label id="expiry_date">Poll Has Expired. Purchase The Winner Here!</label>
-    <a href="{% url 'store' %}" type="submit" class="btn">Buy</a>
+    <button class="btn buy-btn" type="submit">Buy</button>
     </div> 
     </form>
+
     {% else %}
 
     <form method="POST">{% csrf_token %}
