@@ -50,10 +50,11 @@ footer {
 
 .product-description {
     min-height: 40px;
+    color: #000;
 }
 
-caption p {
-    word-wrap: break-word;
+.product-price {
+    color: #000;
 }
 
 .row.row-flex {
@@ -137,5 +138,11 @@ h1, h2 {
 
 .expired-polls {
     position: relative;
-    left: 200px;
+    left: 275px;
+    top: 65px;
+}
+
+.buy-btn {
+    position: relative;
+    left: 13px;
 }
