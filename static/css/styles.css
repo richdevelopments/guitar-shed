@@ -7,6 +7,8 @@ body {
   color: #ededed;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* FF3.6+ */
   background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* IE10 */
@@ -30,20 +32,12 @@ footer {
     color: rgb(0, 0, 0);
 }
 
-
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-}
-
 .product {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 300px;
+    border-radius: 10px;
+    width: 100%;
     height: 200px;
     margin: auto;
 }
@@ -57,14 +51,14 @@ footer {
     color: #000;
 }
 
-.row.row-flex {
+/* .row.row-flex {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
-}
+} */
 
 .panel-default {
-    background-color: #ffffff;
+    background-color: #e2e0e0;
     color: #0a0808;
     padding: 0;
     margin-right: 10px;
@@ -139,8 +133,8 @@ h1, h2 {
 
 .expired-polls {
     position: relative;
-    left: 275px;
-    top: 65px;
+    /* left: 275px; */
+    /* top: 65px; */
 }
 
 .buy-btn {
