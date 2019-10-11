@@ -29,10 +29,10 @@
     <form method="POST">{% csrf_token %}
     <div class="col-xs-3" id="radio">
     <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_one.id }}">
-    <label for="option{{ forloop.counter }}">{{ poll.option_one.option_text }}</label><br>
+    <label for="option{{ forloop.counter }}">{{ poll.option_one.option_text }}</label>
     </div>
     <div class="col-xs-3" id="radio">
-    <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_two.id }}">
+    <span class="radio-vs">vs</span>  <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_two.id }}">
     <label for="option{{ forloop.counter }}">{{ poll.option_two.option_text }}</label><br>
     </div>
     <input type="submit" class="btn btn-primary vote-btn" value="Vote">

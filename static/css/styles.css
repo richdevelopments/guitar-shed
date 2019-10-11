@@ -110,7 +110,6 @@ h1, h2 {
     color:#ffffff;
     bottom: 68px;
     font-size: 20px;
-
 }
 
 #vs {
@@ -119,6 +118,11 @@ h1, h2 {
     left: 175px;
     font-size: 20px;
     bottom: 40px;
+}
+
+.radio-vs {
+    position: relative;
+    right: 50%;
 }
 
 #results-label {
