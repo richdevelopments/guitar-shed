@@ -4,7 +4,7 @@
 {% block title %}Polls{% endblock %} {% block content %}
 
 <h2>Vote For The Lessons You Want!</h2>
-<!-- {% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %} -->
+{% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
 
 {% csrf_token %}
 
@@ -12,12 +12,14 @@
     {% for poll in polls %}
 
      <li><h3>{{ poll }}</h3></li>
+    {% if user not in poll.option_one.voters.all and user not in poll.option_two.voters.all %}
 
     {% if poll.is_past %}
+
     <form method="post" action="{% url 'store' %}">
     {% csrf_token %}
     <div class=" expired-polls">
-    <label id="expiry_date">Poll Has Expired. Purchase The Winner Here!</label>
+    <label id="expiry_date">Poll Expired. Purchase here!</label>
     <button class="btn buy-btn" type="submit">Buy</button>
     </div> 
     </form>
@@ -25,22 +27,29 @@
     {% else %}
 
     <form method="POST">{% csrf_token %}
-    <div class="col-sm-3" id="radio">
+    <div class="col-xs-3" id="radio">
     <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_one.id }}">
     <label for="option{{ forloop.counter }}">{{ poll.option_one.option_text }}</label><br>
     </div>
-    <div class="col-sm-3" id="radio">
+    <div class="col-xs-3" id="radio">
     <input type="radio" name="vote" id="option{{ forloop.counter }}" value="{{ poll.option_two.id }}">
     <label for="option{{ forloop.counter }}">{{ poll.option_two.option_text }}</label><br>
     </div>
 
-    <input type="submit" class="btn btn-primary" value="Vote">
+    <input type="submit" class="btn btn-primary vote-btn" value="Vote">
     </form>
 
+    {% endif %}
 
     <label id="expiry_date">Expiry Date</label><div class="expiry-date">{{ poll.expiry_date.date }}</div>
-    {% endif %}
     <label id="results-label">Results</label><div class="results-option-one">{{ poll.option_one.voters.count }}</div> <span id="vs">vs</span> <div class="results-option-two">{{ poll.option_two.voters.count }}</div>
+
+    {% else %}
+
+    <label id="expiry_date">Expiry Date</label><div class="expiry-date">{{ poll.expiry_date.date }}</div>
+    <label id="results-label">Results</label><div class="results-option-one">{{ poll.option_one.voters.count }}</div> <span id="vs">vs</span> <div class="results-option-two">{{ poll.option_two.voters.count }}</div>
+
+    {% endif %}
 
     {% endfor %}
 
