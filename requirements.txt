@@ -22,7 +22,7 @@ psycopg2==2.7.5
 pycodestyle==2.4.0
 python-dateutil==2.7.3
 pytz==2018.4
-requests==2.22.0
+# requests==2.22.0
 s3transfer==0.1.13
 sqlparse==0.2.4
 stripe==1.84.0
