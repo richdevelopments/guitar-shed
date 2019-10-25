@@ -153,5 +153,8 @@ h1, h2 {
 .buy-btn {
     position: relative;
     left: 13px;
+}
 
+.payment-details-wording {
+    color: #FFFFFF;
 }
