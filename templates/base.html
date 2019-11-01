@@ -177,7 +177,7 @@
 				<p>Made by Richard Wood</p>
 			</div>
 		</footer>
-		{% block head_js %}
+
 		<script src="js/jquery-1.11.0.min.js"></script>
 
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -192,6 +192,8 @@
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
 		</script>
-		{% endblock head_js %}
+
+		{% block head_js %}
+        {% endblock head_js %}
 
 </body>
