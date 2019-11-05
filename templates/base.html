@@ -9,88 +9,9 @@
 	<title>Guitar Shed</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-	<style>
-		input {
-			outline: none;
-			size: 55;
-		}
-
-		input[type=search] {
-			-webkit-appearance: textfield;
-			-webkit-box-sizing: content-box;
-			font-family: inherit;
-			font-size: 100%;
-		}
-
-		input::-webkit-search-decoration,
-		input::-webkit-search-cancel-button {
-			display: none;
-		}
-
-		input[type=search] {
-			background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-			border: solid 1px #ccc;
-			padding: 9px 10px 9px 32px;
-			width: 55px;
-
-			-webkit-border-radius: 10em;
-			-moz-border-radius: 10em;
-			border-radius: 10em;
-
-			-webkit-transition: all .5s;
-			-moz-transition: all .5s;
-			transition: all .5s;
-		}
-
-		input[type=search]:focus {
-			width: 130px;
-			background-color: #fff;
-			border-color: #66CC75;
-
-			-webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-			-moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-			box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-		}
-
-
-		input:-moz-placeholder {
-			color: #999;
-		}
-
-		input::-webkit-input-placeholder {
-			color: #999;
-		}
-
-		/* search-bar */
-		#search-bar input[type=search] {
-			width: 15px;
-			padding-left: 10px;
-			color: transparent;
-			cursor: pointer;
-		}
-
-		#search-bar input[type=search]:hover {
-			background-color: #fff;
-		}
-
-		#search-bar input[type=search]:focus {
-			width: 130px;
-			padding-left: 32px;
-			color: #000;
-			background-color: #fff;
-			cursor: auto;
-		}
-
-		#search-bar input:-moz-placeholder {
-			color: transparent;
-		}
-
-		#search-bar input::-webkit-input-placeholder {
-			color: transparent;
-		}
-	</style>
 </head>
 
 <body>
@@ -150,7 +71,6 @@
 		</div>
 	</div>
 
-
 	{% if messages %}
 	<div class="alert alert-success">
 		<div class="messages">
@@ -171,12 +91,22 @@
 
 		{% endblock %}
 
-		<footer>
-			<div class="container footer-signature" >
+		<footer class="container-fluid">
+			<div class="container footer-signature col-sm-4" >
 				<p>Made by Richard Wood</p>
 			</div>
+            <div class="col-sm-4 contact" >
+				<h4>Contact Us @</h4><p>admin@guitarshed.rock</p>
+			</div>
+            <div class="col-sm-4">
+                <ul class="list-inline social-links">
+                    <li><a href="https://www.facebook.com/RichardWoodMusic/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/Rich007Wood" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCUB27jQFHMsFURlr-F7APOQ/" target="_blank"><i class="fa fa-youtube "></i></a></li>
+                </ul>
+            </div>
 		</footer>
-
+        {% block head_js %}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -189,7 +119,7 @@
         });
 		</script>
 
-        {% block head_js %}
+
         {% endblock head_js %}
 
 </body>

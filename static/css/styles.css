@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+
+.navbar {
+  margin-top: 60px;
+  color: rgb(14, 72, 110);
+  box-shadow: 5px 4px 5px #000;
+}
 
 body {
   font-family: 'PT Sans', sans-serif;
@@ -17,14 +25,88 @@ body {
 
 }
 
-.navbar {
-  margin-top: 60px;
-  color: rgb(14, 72, 110);
-  box-shadow: 5px 4px 5px #000;
+input {
+        outline: none;
+        size: 55;
+    }
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+input[type=search]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #66CC75;
+
+    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+}
+
+
+input:-moz-placeholder {
+    color: #999;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+/* search-bar */
+#search-bar input[type=search] {
+    width: 15px;
+    padding-left: 10px;
+    color: transparent;
+    cursor: pointer;
+}
+
+#search-bar input[type=search]:hover {
+    background-color: #fff;
+}
+
+#search-bar input[type=search]:focus {
+    width: 130px;
+    padding-left: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: auto;
+}
+
+#search-bar input:-moz-placeholder {
+    color: transparent;
+}
+
+#search-bar input::-webkit-input-placeholder {
+    color: transparent;
 }
 
 
 footer {
+    text-align: center;
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -34,6 +116,43 @@ footer {
 
 .footer-signature {
     color: white;
+}
+
+h4 {
+    color: #FFFFFF;
+    margin-top: 0px;
+}
+
+.contact {
+    color: #FFFFFF;
+}
+
+.social-links {
+    color: #f5f5f5;
+    padding-bottom: 15px;
+}
+
+.social-links li a i{
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    margin-top: -3px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    font-size: 18px;
+    line-height: 12px;
+    text-align: center;
+    color: #f5f5f5;
+    background: rgb(30, 103, 151);
+    transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    -ms-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #d01a1a;
 }
 
 .product {
