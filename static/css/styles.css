@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-
+/* ------------------------------
+    Nav bar
+------------------------------ */
 .navbar {
   margin-top: 60px;
   color: rgb(14, 72, 110);
   box-shadow: 5px 4px 5px #000;
 }
+
+/* ------------------------------
+    Body
+------------------------------ */
 
 body {
   font-family: 'PT Sans', sans-serif;
@@ -24,6 +30,10 @@ body {
   background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* W3C */
 
 }
+
+/* ------------------------------
+    Search bar
+------------------------------ */
 
 input {
         outline: none;
@@ -76,7 +86,6 @@ input::-webkit-input-placeholder {
     color: #999;
 }
 
-/* search-bar */
 #search-bar input[type=search] {
     width: 15px;
     padding-left: 10px;
@@ -105,55 +114,9 @@ input::-webkit-input-placeholder {
 }
 
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: rgb(0, 0, 0);
-}
-
-.footer-signature {
-    color: white;
-}
-
-h4 {
-    color: #FFFFFF;
-    margin-top: 0px;
-}
-
-.contact {
-    color: #FFFFFF;
-}
-
-.social-links {
-    color: #f5f5f5;
-    padding-bottom: 15px;
-}
-
-.social-links li a i{
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    margin-top: -3px;
-    border-radius: 50%;
-    border: 1px solid #FFFFFF;
-    font-size: 18px;
-    line-height: 12px;
-    text-align: center;
-    color: #f5f5f5;
-    background: rgb(30, 103, 151);
-    transition: all .35s ease-in-out;
-    -o-transition: all .35s ease-in-out;
-    -ms-transition: all .35s ease-in-out;
-    -moz-transition: all .35s ease-in-out;
-    -webkit-transition: all .35s ease-in-out;
-}
-
-.social-links li a i:hover {
-    background: #d01a1a;
-}
+/* ------------------------------
+    Product Cards
+------------------------------ */
 
 .product {
     background-size: cover;
@@ -174,12 +137,6 @@ h4 {
     color: #000;
 }
 
-/* .row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-} */
-
 .panel-default {
     background-color: #e2e0e0;
     color: #0a0808;
@@ -193,6 +150,14 @@ h4 {
     height: 100%;
 }
 
+.payment-details-wording {
+    color: #FFFFFF;
+}
+
+
+/* ------------------------------
+    Buttons
+------------------------------ */
 
 .btn {
      background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
@@ -201,9 +166,22 @@ h4 {
      text-align: center;
 }
 
+/* ------------------------------
+    Headers
+------------------------------ */
+
 h1, h2 {
     color: rgb(230, 228, 228);
 }
+
+h4 {
+    color: #FFFFFF;
+    margin-top: 0px;
+}
+
+/* ------------------------------
+    Video
+------------------------------ */
 
 .video {
         width: 100%;
@@ -214,6 +192,11 @@ h1, h2 {
             padding-left: 10%;
             padding-right: 10%;
 }
+
+
+/* ------------------------------
+    Voting Poll
+------------------------------ */
 
 .results-option-one {
     position: relative;
@@ -260,8 +243,6 @@ h1, h2 {
 
 .expired-polls {
     position: relative;
-    /* left: 275px; */
-    /* top: 65px; */
 }
 
 .vote-btn {
@@ -274,6 +255,52 @@ h1, h2 {
     left: 13px;
 }
 
-.payment-details-wording {
+
+/* ------------------------------
+    Footer
+------------------------------ */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ededed;
+    color: rgb(0, 0, 0);
+}
+
+.footer-signature {
+    color: white;
+}
+
+.contact {
     color: #FFFFFF;
+}
+
+.social-links {
+    color: #f5f5f5;
+    padding-bottom: 15px;
+}
+
+.social-links li a i{
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    margin-top: -3px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    font-size: 18px;
+    line-height: 12px;
+    text-align: center;
+    color: #f5f5f5;
+    background: rgb(30, 103, 151);
+    transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    -ms-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #d01a1a;
 }
