@@ -113,9 +113,12 @@ input::-webkit-input-placeholder {
     color: transparent;
 }
 
+.search-bar-padding {
+    margin-bottom: 10px;
+}
 
 /* ------------------------------
-    Product Cards
+    Product Panels
 ------------------------------ */
 
 .product {
@@ -171,6 +174,7 @@ input::-webkit-input-placeholder {
 ------------------------------ */
 
 h1, h2 {
+    margin-top: -2px;
     color: rgb(230, 228, 228);
 }
 
