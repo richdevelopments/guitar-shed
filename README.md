@@ -471,7 +471,7 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 
 #### Unsolved bugs
 
-1. The only annoying issue still to fix is the overlapping background on mobile when viewing the Polls page.
+1. Rendering video on mobile (Safari and Chrome).
 
 
 # Deployment
