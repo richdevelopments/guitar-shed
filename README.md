@@ -170,7 +170,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 - [Home](https://ibb.co/CsjNWtj)
 - [Store](https://ibb.co/XDdrpx6)
-- [Polls](https://ibb.co/PMb9jCm)
+- [Polls](https://ibb.co/PNyTKvn)
 - [Register](https://ibb.co/FzxFTJW)
 - [Cart](https://ibb.co/hghYt20)
 - [Log in](https://ibb.co/ZmWCbdd)
