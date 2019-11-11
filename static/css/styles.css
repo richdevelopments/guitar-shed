@@ -9,6 +9,10 @@
   box-shadow: 5px 4px 5px #000;
 }
 
+.dropdown-menu {
+    background-color: rgb(14, 72, 110);
+}
+
 /* ------------------------------
     Body
 ------------------------------ */
