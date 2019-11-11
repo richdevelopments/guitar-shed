@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /* ------------------------------
+    Media Queries
+------------------------------ */
+
+@media (max-width: 767px){
+.navbar .dropdown-menu a {
+    color: #0c0c0c;
+    }
+}
+
+/* ------------------------------
     Nav bar
 ------------------------------ */
+
 .navbar {
   margin-top: 60px;
   color: rgb(14, 72, 110);
@@ -309,8 +320,3 @@ footer {
     background: #d01a1a;
 }
 
-@media (max-width: 767px){
-.navbar .dropdown-menu a {
-    color: #0c0c0c;
-    }
-}
