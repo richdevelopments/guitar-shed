@@ -9,10 +9,6 @@
   box-shadow: 5px 4px 5px #000;
 }
 
-.dropdown-menu {
-    background-color: rgb(14, 72, 110);
-}
-
 /* ------------------------------
     Body
 ------------------------------ */
@@ -311,4 +307,10 @@ footer {
 
 .social-links li a i:hover {
     background: #d01a1a;
+}
+
+@media (max-width: 767px){
+.navbar .dropdown-menu a {
+    color: #0c0c0c;
+    }
 }
