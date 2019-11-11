@@ -27,7 +27,7 @@ The app makes use of Whitenoise to host my static files, as well as integrates w
     - [Goals](#goals)
         - [Visitor Goals](#visitor-goals)
         - [Business Goals](#business-goals)
-        - [Guitar Shed Goals](#family-hub-goals)
+        - [Guitar Shed Goals](#guitar-shed-goals)
     - [User Stories](#user-stories)
         - [Visitor Stories](#visitor-stories)
         - [Business Stories](#business-stories)
